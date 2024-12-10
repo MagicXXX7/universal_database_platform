@@ -1,0 +1,38 @@
+├── backend/
+│   ├── app.js
+│   ├── config/
+│   │   ├── db.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── genericController.js
+│   ├── middlerware/
+│   │   ├── authenticateJWT.js
+│   ├── models/
+│   │   ├── centralControl.js
+│   │   ├── genericModel.js
+│   │   ├── permission.js
+│   │   ├── project.js
+│   │   ├── role.js
+│   │   ├── sound.js
+│   │   ├── table.js
+│   │   ├── user.js
+│   │   ├── userDefinedJSON.js
+│   │   ├── userGroup.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── generic.js
+│   │   ├── projects.js
+│   │   ├── table.js
+│   │   ├── users.js
+├── frontend/
+│   ├── client.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── script.js
+│   ├── styles.css
+├── generateStruc.js
+├── package-lock.json
+├── package.json
+├── test/
+│   ├── test.js

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Database Management System</h1>
+  </header>
+  <nav>
+    <select id="module-select">
+      <option value="users">用户管理</option>
+      <option value="projects">项目管理</option>
+      <option value="roles">角色管理</option>
+      <option value="tables">表单管理</option>
+    </select>
+  </nav>
+  <main>
+    <section id="form-section">
+      <h2>表单操作</h2>
+      <form id="data-form">
+        <!-- 动态生成表单内容 -->
+      </form>
+      <!-- 错误消息显示区域 -->
+      <div id="error-message" style="color: red;"></div>
+    </section>
+    <section id="data-section">
+      <h2>数据展示</h2>
+      <table id="data-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

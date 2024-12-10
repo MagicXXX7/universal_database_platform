@@ -1,0 +1,36 @@
+{
+  "name": "db_platform",
+  "version": "1.0.0",
+  "description": "A modular database management platform for cloud system developers.",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "node backend/app.js",
+    "backend": "node backend/app.js",
+    "frontend": "node frontend/client.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "database",
+    "platform",
+    "backend",
+    "frontend",
+    "cloud",
+    "modular"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^3.0.1"
+  }
+}
