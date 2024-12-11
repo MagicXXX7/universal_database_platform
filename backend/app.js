@@ -9,6 +9,7 @@ const genericRoutes = require('./routes/generic');
 const projectRoutes = require('./routes/projects');
 const userRoutes = require('./routes/users');
 const roleRoutes = require('./routes/roles');
+const metadataRoutes = require('./routes/metadata');
 
 // 使用中间件
 app.use(cors());
@@ -19,6 +20,7 @@ app.use('/api/v1/generic', genericRoutes);
 app.use('/api/v1/projects', projectRoutes);
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/roles', roleRoutes);
+app.use('/api/v1/metadata', metadataRoutes);
 
 // MongoDB 连接
 mongoose.connect('mongodb://localhost:27017/db_platform', {

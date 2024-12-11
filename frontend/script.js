@@ -70,6 +70,7 @@ function fetchAndDisplayData() {
   thead.innerHTML = '';
   tbody.innerHTML = '';
 
+  // 创建表头
   const headerRow = thead.insertRow();
   modules[currentModule].fields.forEach(field => {
     const th = document.createElement('th');
@@ -81,23 +82,25 @@ function fetchAndDisplayData() {
   actionsTh.textContent = '操作';
   headerRow.appendChild(actionsTh);
 
+  // 获取数据并填充表格
   axios.get(modules[currentModule].apiEndpoint)
     .then(response => {
       response.data.forEach(item => {
         const row = tbody.insertRow();
         modules[currentModule].fields.forEach(field => {
           const cell = row.insertCell();
-
-          // 检查字段是否为关联字段并提取子字段值
+          
+          // 检查是否为关联字段并提取子字段值
           if (field === 'created_by' && item[field]) {
-            cell.textContent = item[field].username; // 提取关联字段的 username
+            cell.textContent = item[field].username; // 显示关联字段 username
           } else if (field === 'userGroup' && item[field]) {
-            cell.textContent = item[field].groupName; // 提取关联字段的 groupName
+            cell.textContent = item[field].groupName; // 显示关联字段 groupName
           } else {
             cell.textContent = item[field] || ''; // 处理其他字段
           }
         });
 
+        // 创建操作按钮
         const actionsCell = row.insertCell();
         const editBtn = document.createElement('button');
         editBtn.textContent = '编辑';
@@ -110,7 +113,9 @@ function fetchAndDisplayData() {
         actionsCell.appendChild(deleteBtn);
       });
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
 }
 
 

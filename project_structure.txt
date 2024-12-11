@@ -1,3 +1,4 @@
+├── .gitignore
 ├── backend/
 │   ├── app.js
 │   ├── config/
@@ -21,7 +22,9 @@
 │   ├── routes/
 │   │   ├── auth.js
 │   │   ├── generic.js
+│   │   ├── metadata.js
 │   │   ├── projects.js
+│   │   ├── roles.js
 │   │   ├── table.js
 │   │   ├── users.js
 ├── frontend/
@@ -34,5 +37,6 @@
 ├── generateStruc.js
 ├── package-lock.json
 ├── package.json
+├── project_structure.txt
 ├── test/
 │   ├── test.js
