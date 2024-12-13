@@ -11,6 +11,7 @@
 │   ├── models/
 │   │   ├── centralControl.js
 │   │   ├── genericModel.js
+│   │   ├── index.js
 │   │   ├── permission.js
 │   │   ├── project.js
 │   │   ├── role.js
@@ -21,11 +22,15 @@
 │   │   ├── userGroup.js
 │   ├── routes/
 │   │   ├── auth.js
+│   │   ├── centralControl.js
 │   │   ├── generic.js
 │   │   ├── metadata.js
+│   │   ├── permissions.js
 │   │   ├── projects.js
 │   │   ├── roles.js
 │   │   ├── table.js
+│   │   ├── userDefinedJSON.js
+│   │   ├── userGroups.js
 │   │   ├── users.js
 ├── frontend/
 │   ├── client.js
@@ -37,6 +42,5 @@
 ├── generateStruc.js
 ├── package-lock.json
 ├── package.json
-├── project_structure.txt
 ├── test/
 │   ├── test.js

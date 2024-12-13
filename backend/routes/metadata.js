@@ -1,6 +1,7 @@
+// toutes/metadata.js
 const express = require('express');
 const router = express.Router();
-const models = require('../models'); // 引入所有模型
+const models = require('../models');
 
 // 获取所有模型的元数据
 router.get('/models', (req, res) => {

@@ -1,10 +1,20 @@
-// backend/models/userGroup.js
+// models/userGroup.js
 const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
-const userGroupSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  members: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],  // 用户组成员
-}, { timestamps: true });
+const UserGroupSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        default: '',
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+});
 
-const UserGroup = mongoose.model('UserGroup', userGroupSchema);
-module.exports = UserGroup;
+module.exports = mongoose.model('UserGroup', UserGroupSchema);
